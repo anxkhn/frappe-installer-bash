@@ -9,28 +9,31 @@ This script automates the installation process for Frappe/ERPNext Version-15 on 
 Execute the following command in your terminal:
 
 ```bash
-curl -o- https://raw.githubusercontent.com/anxkhn/frappe-installer-bash/main/installer.sh | bash
+wget -O installer.sh https://raw.githubusercontent.com/anxkhn/frappe-installer-bash/main/installer.sh && chmod +x installer.sh && ./installer.sh
 ```
 
 - If you are unable to resolve raw.githubusercontent.com it might be due to India blocking GitHub's content domain and preventing downloads. You may use a VPN, change your DNS provider to Google/Cloudflare/etc or use the following step to download the script and run it locally.
 
 Source: <https://timesofindia.indiatimes.com/gadgets-news/github-content-domain-blocked-for-these-indian-users-reports/articleshow/96687992.cms>
 
-
 1. **Clone the Repository and Run the Script:**
 
 Execute the script by running:
+
 ```bash
+sudo apt install -y git
 git clone https://github.com/anxkhn/frappe-installer-bash
 cd frappe-installer-bash
+chmod +x installer.sh
 ./installer.sh
 ```
-This script will automatically install Frappe/ERPNext along with all required dependencies and configurations.
 
+This script will automatically install Frappe/ERPNext along with all required dependencies and configurations.
 
 2. **Enter Necessary Passwords:**
 
 During the installation process, you will be prompted to enter the following passwords:
+
 - **Root Password:** Enter the password for root user to install necessary dependencies.
 - **MariaDB Root Password:** Enter a secure password for the MariaDB root user.
 - **Administrator Password:** Enter a secure password for the Frappe/ERPNext administrator.
@@ -43,7 +46,7 @@ Once the installation completes successfully, access Frappe/ERPNext by navigatin
 
 5. **Additional Information:**
 
-- For detailed information on the setup and configuration of individual components, refer to - [D-codeE Video Tutorial](https://youtu.be/TReR0I0O1Xo) and  [D-codeE Github Repo](https://github.com/D-codE-Hub/Frappe-ERPNext-Version-15--in-Ubuntu-22.04-LTS/tree/main)
+- For detailed information on the setup and configuration of individual components, refer to - [D-codeE Video Tutorial](https://youtu.be/TReR0I0O1Xo) and [D-codeE Github Repo](https://github.com/D-codE-Hub/Frappe-ERPNext-Version-15--in-Ubuntu-22.04-LTS/tree/main)
 - For more information on the installation process, refer to the [Frappe/ERPNext Documentation](https://frappeframework.com/docs/user/en)
 
 ## Future Work
@@ -56,9 +59,7 @@ Once the installation completes successfully, access Frappe/ERPNext by navigatin
 - [ ] Improve error handling with proper status codes
 - [ ] Add support for MacOS
 
-
 ## References
 
 - [Frappe Framework Documentation](https://frappeframework.com/docs/user/en)
 - [Frappe Bench Documentation](https://frappeframework.com/docs/user/en/bench)
-
